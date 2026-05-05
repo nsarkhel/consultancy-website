@@ -552,10 +552,12 @@
   @media (max-width: 900px) {
     nav { padding: 1.25rem 2rem; }
     .nav-links { display: none; }
-    .hero { grid-template-columns: 1fr; }
-    .hero-right { display: none; }
-    .hero-left { padding: 7rem 2rem 2rem; }
-    .hero-stats { grid-template-columns: repeat(2, 1fr); position: static; }
+    .hero { grid-template-columns: 1fr; position: relative; min-height: 85vh; }
+    .hero-right { position: absolute; inset: 0; z-index: 0; display: block; }
+    .hero-right::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, rgba(10,18,40,0.92) 0%, rgba(10,18,40,0.72) 55%, rgba(10,18,40,0.25) 100%); }
+    .hero-img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    .hero-left { position: relative; z-index: 1; padding: 7rem 2rem 8rem; }
+    .hero-stats { grid-template-columns: repeat(2, 1fr); position: static; z-index: 1; }
     .section-inner { padding: 0 2rem; }
     .prop-grid { grid-template-columns: 1fr; gap: 2rem; }
     .prop-photo-col img { max-height: 260px; object-fit: cover; object-position: center top; }
@@ -602,16 +604,16 @@
       <div class="stat-label">AUM Built</div>
     </div>
     <div class="stat">
-      <div class="stat-num">$600m+</div>
-      <div class="stat-label">Capital Raised</div>
+      <div class="stat-num">7</div>
+      <div class="stat-label">Institutional Funds Structured</div>
     </div>
     <div class="stat">
       <div class="stat-num">150+</div>
-      <div class="stat-label">Due Diligence Processes</div>
+      <div class="stat-label">DD Processes Led</div>
     </div>
     <div class="stat">
-      <div class="stat-num">7</div>
-      <div class="stat-label">Institutional Fund Raises</div>
+      <div class="stat-num">16</div>
+      <div class="stat-label">Years RE Private Equity</div>
     </div>
   </div>
 </section>
@@ -707,24 +709,24 @@
           <div class="track-stat-label">Assets Under Management Built</div>
         </div>
         <div class="track-stat">
-          <div class="track-stat-num">$600m+</div>
-          <div class="track-stat-label">Investor Commitments Closed</div>
+          <div class="track-stat-num">7</div>
+          <div class="track-stat-label">Institutional Funds Structured</div>
         </div>
         <div class="track-stat">
           <div class="track-stat-num">150+</div>
           <div class="track-stat-label">Due Diligence Processes Led</div>
         </div>
         <div class="track-stat">
-          <div class="track-stat-num">7</div>
-          <div class="track-stat-label">Institutional Fund Raises</div>
+          <div class="track-stat-num">16</div>
+          <div class="track-stat-label">Years RE Private Equity</div>
         </div>
       </div>
       <div class="reveal">
         <ul class="track-list">
-          <li>Equity Partner, COO and member of the Investment, Management and Supervisory Committees at Newcore Capital for 10 years</li>
-          <li>Managed 120+ investor relationships across institutions, family offices and high-net-worth individuals</li>
-          <li>Led all fund management, investor relations, ESG, compliance, debt and finance functions</li>
-          <li>Prior experience at Brockton Capital and Goldman Sachs Real Estate, London</li>
+          <li>Equity Partner, COO and member of the Investment, Management and Supervisory Committees at Newcore Capital — helped scale the business from $50m to $800m AUM over ten years</li>
+          <li>Structured seven institutional funds from inception to final close and managed 120+ investor relationships across institutions, family offices and high-net-worth individuals</li>
+          <li>Built the team and institutional-grade processes that allowed Newcore to safely and effectively manage its granular investment strategy at scale</li>
+          <li>Led capital raising, investor relations, fund management, debt and finance functions across the full business lifecycle</li>
           <li>MPhil Real Estate Finance, University of Cambridge</li>
           <li>BSc (First Class Honours), Cass Business School</li>
         </ul>
@@ -736,48 +738,29 @@
 <!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="section-inner">
-    <div class="contact-inner">
+    <div style="max-width:680px;margin:0 auto;text-align:center;">
       <div class="reveal">
-        <p class="section-tag">Get in Touch</p>
-        <h2 class="section-title light">Let's work<br>together.</h2>
-        <p class="contact-intro">I work with a deliberately small number of clients at any one time. If you are raising capital, building institutional infrastructure, or looking to deploy capital thoughtfully into real estate, I would welcome a conversation. Use the form or connect with me on LinkedIn.</p>
-        <div class="contact-details">
-          <div class="contact-row">
+        <p class="section-tag" style="justify-content:center;">Get in Touch</p>
+        <h2 class="section-title light">Get in touch.</h2>
+        <p class="contact-intro" style="text-align:center;margin-top:1.5rem;">I work with a deliberately small number of clients at any one time. If you are raising capital, building institutional infrastructure, or looking to deploy capital thoughtfully into real estate, LinkedIn is the best place to reach me.</p>
+        <div style="margin-top:3rem;">
+          <a href="https://www.linkedin.com/in/neilsarkhel" target="_blank" style="display:inline-flex;align-items:center;gap:1rem;background:#c9a84c;color:#0f1e3c;font-family:inherit;font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:1.1rem 2.5rem;transition:background .2s;">
+            Connect on LinkedIn &rarr;
+          </a>
+        </div>
+        <div style="margin-top:3rem;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08);">
+          <div class="contact-row" style="justify-content:center;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,.06);">
+            <span class="contact-label">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/neilsarkhel" target="_blank" class="contact-value linkedin-link">linkedin.com/in/neilsarkhel &rarr;</a>
+          </div>
+          <div class="contact-row" style="justify-content:center;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,.06);">
+            <span class="contact-label">Personal</span>
+            <a href="https://sarkhel.com" target="_blank" class="contact-value linkedin-link">sarkhel.com &rarr;</a>
+          </div>
+          <div class="contact-row" style="justify-content:center;padding:1rem 0;">
             <span class="contact-label">Based</span>
             <span class="contact-value">Dubai, UAE</span>
           </div>
-          <div class="contact-row">
-            <span class="contact-label">LinkedIn</span>
-            <a href="https://www.linkedin.com/in/neilsarkhel" target="_blank" class="contact-value linkedin-link">Connect on LinkedIn →</a>
-          </div>
-        </div>
-      </div>
-      <div class="contact-form-area reveal">
-        <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" id="contact-form">
-          <input type="hidden" name="form-name" value="contact">
-          <div style="display:none;">
-            <label>Don't fill this out: <input name="bot-field"></label>
-          </div>
-          <div class="form-group">
-            <label>Your Name</label>
-            <input type="text" name="name" placeholder="Full name" required>
-          </div>
-          <div class="form-group">
-            <label>Email Address</label>
-            <input type="email" name="email" placeholder="your@email.com" required>
-          </div>
-          <div class="form-group">
-            <label>Organisation</label>
-            <input type="text" name="organisation" placeholder="Company or fund name">
-          </div>
-          <div class="form-group">
-            <label>Message</label>
-            <textarea rows="5" name="message" placeholder="Brief overview of what you're working on..." required></textarea>
-          </div>
-          <button class="form-submit" id="submit-btn" type="submit">Send message →</button>
-        </form>
-        <div id="form-success" style="display:none; padding: 1.5rem; background: rgba(255,255,255,0.05); border-left: 3px solid #c9a84c;">
-          <p style="color: #c9a84c; font-size: 0.85rem; letter-spacing: 0.05em;">Message sent — Neil will be in touch shortly.</p>
         </div>
       </div>
     </div>
